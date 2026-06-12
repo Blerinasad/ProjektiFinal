@@ -6,6 +6,7 @@ import { Browser } from "@components/Applications/Browser/Browser";
 import { Documents } from "@components/Applications/Documents/Documents";
 import { Preferences } from "@components/Applications/Preferences/Preferences";
 import { News } from "@components/Applications/News/News";
+import { Gallery } from "@components/Applications/Gallery/Gallery";
 
 interface Props {
   isVisible: boolean;
@@ -17,11 +18,7 @@ const WindowComponents: { [key in WindowType]: React.FunctionComponent<{}> } = {
  news: News,
   camera: Camera,
   browser: Browser,
-  gallery: () => (
-    <div className="flex flex-col flex-1 max-h-full px-6 overflow-y-auto">
-      <h1 className="w-full text-4xl font-bold text-left">Gallery</h1>
-    </div>
-  ),
+ gallery: Gallery,
   folder: Documents,
   preference: Preferences,
 };

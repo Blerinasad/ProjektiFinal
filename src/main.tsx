@@ -8,6 +8,7 @@ import App from "./App";
 
 import { AuthContextProvider } from "@context/AuthContext/AuthContextProvider";
 import { WindowContextProvider } from "@context/WindowContext/WindowContextProvider";
+import { ThemeContextProvider } from "@context/ThemeContext/ThemeContextProvider";
 
 import "./styles/index.css";
 
@@ -15,13 +16,15 @@ const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <AuthContextProvider>
-        <WindowContextProvider>
-          <App />
-        </WindowContextProvider>
-      </AuthContextProvider>
-      <ReactQueryDevtools />
-    </QueryClientProvider>
+    <ThemeContextProvider>
+      <QueryClientProvider client={queryClient}>
+        <AuthContextProvider>
+          <WindowContextProvider>
+            <App />
+          </WindowContextProvider>
+        </AuthContextProvider>
+        <ReactQueryDevtools />
+      </QueryClientProvider>
+    </ThemeContextProvider>
   </React.StrictMode>
 );
