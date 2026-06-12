@@ -7,6 +7,8 @@ import { Documents } from "@components/Applications/Documents/Documents";
 import { Preferences } from "@components/Applications/Preferences/Preferences";
 import { News } from "@components/Applications/News/News";
 import { Gallery } from "@components/Applications/Gallery/Gallery";
+import { Calculator } from "@components/Applications/Calculator/Calculator";
+import { Weather } from "@components/Applications/Weather/Weather";
 
 interface Props {
   isVisible: boolean;
@@ -21,6 +23,9 @@ const WindowComponents: { [key in WindowType]: React.FunctionComponent<{}> } = {
  gallery: Gallery,
   folder: Documents,
   preference: Preferences,
+  calculator: Calculator,
+  weather: Weather,
+
 };
 
 export const WindowModal = ({ isVisible, onClose, component }: Props) => {

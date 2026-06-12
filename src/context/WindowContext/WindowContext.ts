@@ -6,7 +6,9 @@ export type WindowType =
   | "gallery"
   | "folder"
   | "news"
-  | "preference";
+  | "preference"
+  | "calculator"
+  | "weather";
 
 export interface WindowContextValues {
   openWindow: (window: WindowType) => void;

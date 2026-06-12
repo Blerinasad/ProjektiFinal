@@ -26,4 +26,15 @@ export const applications: ApplicationProps[] = [
     type: "folder",
     icon: "folder",
   },
+  {
+    name: "Calculator",
+    type: "calculator",
+    icon: "gears",
+  },
+{
+  name: "Weather",
+  type: "weather",
+  icon: "light",
+},
+
 ];
